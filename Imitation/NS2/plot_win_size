@@ -1,0 +1,8 @@
+#!/usr/bin/gnuplot -persist
+set encoding utf8
+set term pdfcairo font "Arial,9"
+set out 'win.pdf'
+set style line 2
+set xlabel "time"
+set ylabel "size"
+plot "win" using ($1):($2) with lines title "Size"

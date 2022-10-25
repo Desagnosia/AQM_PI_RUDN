@@ -1,0 +1,9 @@
+#!/usr/bin/gnuplot -persist
+set encoding utf8
+set term pdfcairo font "Arial,9"
+set out 'plots.pdf'
+set style line 2
+set xlabel "Time"
+plot "./results/1.dat" using ($2):($4) with lines title "Data over time"
+plot "./results/1.dat" using ($2):($7) with lines title "CWND over time"
+plot "./results/1.dat" using ($2):($8) with lines title "Round-trip time"

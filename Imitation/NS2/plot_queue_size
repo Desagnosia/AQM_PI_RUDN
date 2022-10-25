@@ -1,0 +1,7 @@
+#!/usr/bin/gnuplot -persist
+set encoding utf8
+set term pdfcairo font "Arial,9"
+set out 'queue.pdf'
+set style line 2
+set xlabel "time"
+plot "queue.tr" using ($1):($5) with lines title "Queue"

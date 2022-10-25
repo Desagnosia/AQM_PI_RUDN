@@ -1,0 +1,8 @@
+#!/usr/bin/gnuplot -persist
+set encoding utf8
+set term pdfcairo font "Arial,9"
+set out './Imitation/NS3/queue.pdf'
+set style line 2
+set xlabel "time"
+plot "./Imitation/NS3/pie-queue-disc.plotme" using ($1):($2) with lines title "Queue"
+plot "./Imitation/NS3/pie-queue-disc_avg.plotme" using ($1):($2) with lines title "Queue avg"
